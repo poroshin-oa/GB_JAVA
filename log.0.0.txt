@@ -1,0 +1,12 @@
+февр. 01, 2023 9:32:36 PM Seminar2Task1 file_out
+WARNING: Что-то пошло не так
+февр. 01, 2023 9:32:56 PM Seminar2Task1 file_out
+WARNING: Что-то пошло не такC:/test.txt (No such file or directory)
+февр. 01, 2023 9:33:26 PM Seminar2Task1 file_out
+WARNING: Что-то пошло не так, ошибка: C:/test.txt (No such file or directory)
+февр. 01, 2023 9:37:44 PM Seminar2Task1 byte_input
+WARNING: Что-то пошло не так, ошибка: Value out of range. Value:"12321" Radix:10
+февр. 01, 2023 9:37:44 PM Seminar2Task1 file_out
+WARNING: Что-то пошло не так, ошибка: C:/test.txt (No such file or directory)
+февр. 01, 2023 9:38:16 PM Seminar2Task1 byte_input
+WARNING: Что-то пошло не так, ошибка: Value out of range. Value:"321321" Radix:10

@@ -6,6 +6,7 @@
 import java.io.FileOutputStream;
 import java.io.FileInputStream;
 import java.util.Scanner;
+import java.util.logging.Level;
 import java.util.logging.LogManager;
 import java.util.logging.Logger;
 
@@ -22,14 +23,20 @@ public class Seminar2Task1 {
     }
     // Метод для ввода
     public static byte byte_input(){
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Input string");
+        try{
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Input byte");
 
-        Byte inp_byte = scanner.nextByte();
+            Byte inp_byte = scanner.nextByte();
+            scanner.close();
 
-        scanner.close();
+            return inp_byte;
+        }
+        catch(Exception ex){
+            LOGGER.log(Level.WARNING, "Что-то пошло не так, ошибка: " + ex.getMessage());
+        }
 
-        return inp_byte;
+        return 0;
     }
 
     // Метод записи в файл
@@ -41,13 +48,12 @@ public class Seminar2Task1 {
             fos.write(byte_array);
         }
         catch(Exception ex){
-            System.out.println(ex.getMessage());
+            LOGGER.log(Level.WARNING, "Что-то пошло не так, ошибка: " + ex.getMessage());
         }
     }
 
     public static void main(String[] args) {
         Byte new_byte = byte_input();
         file_out("test.txt", new_byte);
-
     }
 }
