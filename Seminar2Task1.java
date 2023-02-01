@@ -4,9 +4,22 @@
 //После написания, попробуйте подать на вход числа 100 и 200 и проследите разницу в результате
 
 import java.io.FileOutputStream;
+import java.io.FileInputStream;
 import java.util.Scanner;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 
 public class Seminar2Task1 {
+    // Метод логгера
+    static Logger LOGGER;
+    static {
+        try(FileInputStream ins = new FileInputStream("log.config")){
+            LogManager.getLogManager().readConfiguration(ins);
+            LOGGER = Logger.getLogger(Seminar2Task1.class.getName());
+        }catch (Exception ignore){
+            ignore.printStackTrace();
+        }
+    }
     // Метод для ввода
     public static byte byte_input(){
         Scanner scanner = new Scanner(System.in);
