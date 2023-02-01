@@ -3,6 +3,7 @@
 //
 //После написания, попробуйте подать на вход числа 100 и 200 и проследите разницу в результате
 
+import java.io.FileOutputStream;
 import java.util.Scanner;
 
 public class Seminar2Task1 {
@@ -18,13 +19,22 @@ public class Seminar2Task1 {
         return inp_byte;
     }
 
-    //Метод записи в файл
+    // Метод записи в файл
     public static void file_out(String out_file_name, Byte out_byte){
+        byte[] byte_array = new byte[1]; // Костыль? Не нашел способа записи переменной типа byte в файл.
+        byte_array[0] = out_byte;
 
+        try(FileOutputStream fos = new FileOutputStream(out_file_name)){
+            fos.write(byte_array);
+        }
+        catch(Exception ex){
+            System.out.println(ex.getMessage());
+        }
     }
 
     public static void main(String[] args) {
         Byte new_byte = byte_input();
-        file_out("test", new_byte);
+        file_out("test.txt", new_byte);
+
     }
 }
