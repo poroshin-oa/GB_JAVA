@@ -29,20 +29,42 @@ public class Homework {
 
     // Найти минимальное значение
     public static Integer getMin(List<Integer> list){
+        int list_min = list.get(0);
 
-        return 0;
+        for (int i = 0; i < list.size(); i++) {
+            if(list.get(i) < list_min){
+                list_min = list.get(i);
+            }
+        }
+
+        return list_min;
     }
 
     // Найти максимальное значение
     public static Integer getMax(List<Integer> list){
+        int list_max = list.get(0);
 
-        return 0;
+        for (int i = 0; i < list.size(); i++) {
+            if(list.get(i) > list_max){
+                list_max = list.get(i);
+            }
+        }
+
+        return list_max;
     }
 
     // Найти среднее значение
     public static Integer getAverage(List<Integer> list){
+        int list_sum = 0;
+        int list_average = 0;
 
-        return 0;
+        for (int i = 0; i < list.size(); i++) {
+            list_sum += list.get(i);
+        }
+
+        list_average = list_sum / list.size();
+
+        return list_average;
     }
 
     // Пусть дан произвольный список целых чисел
