@@ -15,16 +15,19 @@ public class Homework {
     }
 
     // Нужно удалить из него четные числа
-    public static List<Integer> removeEvenValue(List<Integer> rem_list){
+    //
+    // Решение через дополнительный список, при удалении из основного почему-то
+    // меняется так же и исходный список.
+    public static List<Integer> removeEvenValue(List<Integer> list){
         ArrayList<Integer> result_rem_even_list = new ArrayList<Integer>();
 
-        for (int i = 0; i < rem_list.size(); i++) {
-            if(rem_list.get(i) % 2 == 0){
-
+        for (int i = 0; i < list.size(); i++) {
+            if(list.get(i) % 2 != 0){
+                result_rem_even_list.add(list.get(i));
             }
         }
 
-        return rem_list;
+        return result_rem_even_list;
     }
 
     // Найти минимальное значение
@@ -87,8 +90,8 @@ public class Homework {
         System.out.print("\n");
 
 
-//        System.out.println("Удаленные четные числа: ");
-//        System.out.print(rem_even_list);
-//        System.out.println("\n");
+        System.out.println("Удаленные четные числа: ");
+        System.out.print(rem_even_list);
+        System.out.println("\n");
     }
 }
