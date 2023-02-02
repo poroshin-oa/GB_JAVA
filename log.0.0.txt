@@ -10,3 +10,5 @@ WARNING: Что-то пошло не так, ошибка: Value out of range. V
 WARNING: Что-то пошло не так, ошибка: C:/test.txt (No such file or directory)
 февр. 01, 2023 9:38:16 PM Seminar2Task1 byte_input
 WARNING: Что-то пошло не так, ошибка: Value out of range. Value:"321321" Radix:10
+февр. 01, 2023 9:41:31 PM Seminar2Task1 byte_input
+WARNING: Что-то пошло не так, ошибка: Value out of range. Value:"200" Radix:10
